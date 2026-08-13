@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Menu, X, ArrowRight, Star, Phone, Instagram, MapPin, Clock, Check, MessageCircle, ChevronDown } from "lucide-react";
 
-const WA_NUMBER = "5511998765432";
+const WA_NUMBER = "5519982920110";
 const WA_MSG = encodeURIComponent("Olá! Gostaria de agendar uma consulta gratuita de mega hair.");
 const WA_URL = `https://wa.me/${WA_NUMBER}?text=${WA_MSG}`;
 
@@ -16,13 +16,15 @@ const SERVICES = [
 ];
 
 const GALLERY = [
-  { src: "https://scontent.fcpq2-1.fna.fbcdn.net/v/t51.82787-15/727083924_18608404087062937_6759821894727663032_n.jpg?stp=dst-jpg_tt6&cstp=mx3024x4032&ctp=s3024x4032&_nc_cat=108&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeH8RX-kH-e4o7VKb3ntYnDC3yzePSyXlGPfLN49LJeUY2ZGiI349R9xDEXpjbIN_m0&_nc_ohc=edCimxB1w14Q7kNvwEZu0a8&_nc_oc=AdqRKeyF3q2f0e7KiS315kuye5ya6oUzDKNmB3_Ghfg46pkGELrzuITNgzjxrqXu0XIVqlrGZPW3-6xGRnCK5-bH&_nc_zt=23&_nc_ht=scontent.fcpq2-1.fna&_nc_gid=ujJ4l1JvQFV_kDCBXBkImA&_nc_ss=7b2a8&oh=00_AQH2yxilrLYAE771tFYpgXBmEQFAk45usCQlqO1bEaYjlw&oe=6A7B22C6", alt: "Cabelo longo e volumoso", span: "row-span-2" },
-  { src: "https://scontent.fcpq2-1.fna.fbcdn.net/v/t51.82787-15/722204597_18605525749062937_9072460078563970475_n.jpg?stp=dst-jpg_tt6&cstp=mx1206x1180&ctp=s1206x1180&_nc_cat=106&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeGPnHqYBQCozmCY3TzpEj8hbEEOwPcio7tsQQ7A9yKju2t7ZH4DSTJmIUzOBixX-GE&_nc_ohc=ZUixhamVVvcQ7kNvwHEtEEe&_nc_oc=Adp5YY-tLbyCaDB5PukCOBe8DY-sDpaVgoL7XzntrXdogS89hsZC_cZkbw2SThwtDpIvSkyOFZmIyAbwFusTwFu4&_nc_zt=23&_nc_ht=scontent.fcpq2-1.fna&_nc_gid=efhxS2sxpWzKMbUTjCBucw&_nc_ss=7b2a8&oh=00_AQGfbGk7LtB1r3tpwgEGnZfiFvyy2uhsHjU8_Wtq-zEnLw&oe=6A7B2FD4", alt: "Mega hair natural", span: "" },
-  { src: "https://scontent.fcpq2-1.fna.fbcdn.net/v/t51.82787-15/705387976_18599485012062937_3926917693238148927_n.jpg?stp=dst-jpegr_tt6&cstp=mx4096x4096&ctp=s4096x4096&_nc_cat=106&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeEr9it8Ume-wO0-BjV1qGO_gHjJkYk6cI6AeMmRiTpwjsscSvwKmISaxeivaS9FPDs&_nc_ohc=dM4ExJRtuPYQ7kNvwEWhn1r&_nc_oc=Adrc0qdmdOwS-diGwFNRhLwsp1S1sS9kdhtkPCnKc63Rud9dN1mKvWZRFA32TpvBqp68wDaFJ6vNdkjKSwPdIOTd&_nc_zt=23&se=-1&_nc_ht=scontent.fcpq2-1.fna&_nc_gid=4VDdkfWpI3EqgbwsT5YJ3A&_nc_ss=7b2a8&oh=00_AQGKs2EhSQDFuXXnyv3CnMu4nK9pXngtqOgtMgEr_aJNqg&oe=6A7B2061", alt: "Volume e brilho", span: "" },
-  { src: "https://scontent.fcpq2-1.fna.fbcdn.net/v/t51.82787-15/694236437_18596721259062937_3783193018253107706_n.jpg?stp=dst-jpg_tt6&cstp=mx3077x4096&ctp=s3077x4096&_nc_cat=102&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeHO6uWTRAXc2WANe3DxtCVII82_L9o5Pbkjzb8v2jk9ube-uuHAZeDCGAOPflGtDy0&_nc_ohc=6_O6jOyqhtcQ7kNvwEru3q0&_nc_oc=AdoL-HAAD0-o3M1EEQQTMeqI1NgDR26Gj2oSCi2n0c8fjR6Q8fMcttCNz9Z-Iza7hOePFtZ9JM8Jwc2jRThfCiqu&_nc_zt=23&_nc_ht=scontent.fcpq2-1.fna&_nc_gid=KPUjtHOwGgQviGzDa3Ifhw&_nc_ss=7b2a8&oh=00_AQGGI-mO3-7r8b83Zz9WHRugKiw8sihGvpb3usW-uNuwGA&oe=6A7B0F49", alt: "Resultado mega hair", span: "row-span-2" },
-  { src: "https://scontent.fcpq2-1.fna.fbcdn.net/v/t51.82787-15/692666705_18596638924062937_1106522702850547557_n.jpg?stp=dst-jpg_tt6&cstp=mx2268x3024&ctp=s2268x3024&_nc_cat=103&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeEsZXqpcSO6PLZ-kfhlS2yszWyFsCAog1fNbIWwICiDV0BuPMqnqRinQtArbkySsuE&_nc_ohc=1keimNBaGPUQ7kNvwGEK700&_nc_oc=AdoZC7YL30bcXRJ5uIw5bky3bdWvW77Wz6C7txkQf-DSiqcSzDCjaDqM5ITPUTK5V0k35hdkhdfgzN6Cp54GIzR2&_nc_zt=23&_nc_ht=scontent.fcpq2-1.fna&_nc_gid=Yo3iRr68utGA7KgtvLMYIw&_nc_ss=7b2a8&oh=00_AQHvdu9nb5PztK1O85icds9EhqTaepjwSDkkHp31soATNg&oe=6A7B2450", alt: "Cabelo liso mega hair", span: "" },
-  { src:"https://scontent.fcpq2-1.fna.fbcdn.net/v/t51.82787-15/642515432_18577626130062937_49470810619992651_n.jpg?stp=dst-jpg_tt6&cstp=mx720x960&ctp=s720x960&_nc_cat=104&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeE-H9fL5e-IO6QouKHsc0B0S4wdgIUQB8NLjB2AhRAHw_07lDXXRMQFKKCyCUMsibI&_nc_ohc=0_1czFWDaHcQ7kNvwEi9Pxx&_nc_oc=Adr-yfIZy_iKS4FfdA0ozJ_HexXoeSI8uqjdxov7lcttCi8p_decwvvqqWxY35HkM6ZWb59jsapyGbproszeUItL&_nc_zt=23&_nc_ht=scontent.fcpq2-1.fna&_nc_gid=Z89_IDtUyJvU1z4Pzr-Umw&_nc_ss=7b2a8&oh=00_AQHz8om-natO04k7XMj5VbgKWByP-YmooEVTLm5YLBl0rw&oe=6A7B027D", alt: "Transformação completa", span: "" },
+  { src: "https://images.unsplash.com/photo-1636153279424-cb5d1e00f5a2?w=600&h=800&fit=crop&auto=format&q=80", alt: "Cabelo longo e volumoso", span: "row-span-2" },
+  { src: "https://images.unsplash.com/photo-1619218533116-f050e7d91d91?w=600&h=400&fit=crop&auto=format&q=80", alt: "Mega hair natural", span: "" },
+  { src: "https://images.unsplash.com/photo-1611367540736-b1b38aff784b?w=600&h=400&fit=crop&auto=format&q=80", alt: "Volume e brilho", span: "" },
+  { src: "https://images.unsplash.com/photo-1535579710123-3c0f261c474e?w=600&h=800&fit=crop&auto=format&q=80", alt: "Resultado mega hair", span: "row-span-2" },
+  { src: "https://images.unsplash.com/photo-1574015974293-817f0ebebb74?w=600&h=400&fit=crop&auto=format&q=80", alt: "Cabelo liso mega hair", span: "" },
+  { src: "https://images.unsplash.com/photo-1633381521050-26bb467d9d5a?w=600&h=400&fit=crop&auto=format&q=80", alt: "Transformação completa", span: "" },
 ];
+
+
 
 const REVIEWS = [
   { name: "Camila F.", city: "Rio Claro", text: "Nunca imaginei que ficaria tão natural. Ninguém acredita que não é meu cabelo — já fiz três vezes!", stars: 5 },
@@ -86,7 +88,7 @@ export default function App() {
         {/* Background image — full bleed with tint */}
         <div className="absolute inset-0 bg-card">
           <img
-            src="https://images.unsplash.com/photo-1636153279424-cb5d1e00f5a2?w=1600&h=1200&fit=crop&auto=format&q=90"
+            src="/images/hero-bg.jpg"
             alt="Mulher com cabelos longos e naturais"
             className="w-full h-full object-cover object-top opacity-40"
           />
@@ -147,12 +149,12 @@ export default function App() {
           {/* Images stack */}
           <div className="relative h-[520px]">
             <img
-              src="https://scontent.fcpq2-1.fna.fbcdn.net/v/t51.82787-15/758677121_18621001957062937_1090465081546017770_n.jpg?stp=dst-jpegr_tt6&cstp=mx3072x4096&ctp=s3072x4096&_nc_cat=107&ccb=1-7&_nc_sid=127cfc&_nc_ohc=2BNtVmLSmD4Q7kNvwFH9829&_nc_oc=Adpu6sk336FXSmdybV6uj4UTUU0YU0KaaHUFB8gueOQCBxmUi1d5Wk4K9xf0ftJwB63eltBiQUCrMLQQkyMTdUTg&_nc_zt=23&se=-1&_nc_ht=scontent.fcpq2-1.fna&_nc_gid=Fp60fSDzpng1Ywrms7vAig&_nc_ss=7b289&oh=00_AQE-Zb9Cxd657AXlO4Pb45LOfANG2aihd5q9BFYMGLE3IA&oe=6A7B1EB7"
+              src="https://images.unsplash.com/photo-1626383137804-ff908d2753a2?w=600&h=700&fit=crop&auto=format&q=80"
               alt="Interior do salão Studio Aflores"
               className="absolute top-0 left-0 w-3/4 h-4/5 object-cover bg-card"
             />
             <img
-              src="https://scontent.fcpq2-1.fna.fbcdn.net/v/t51.82787-15/758573710_18621019246062937_5564176628514156118_n.jpg?stp=dst-jpg_tt6&cstp=mx1608x2144&ctp=s1608x2144&_nc_cat=101&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeHVBFpR_lS4gRaHJW4ladQxhqe6vUiY9AiGp7q9SJj0CHkRwXlkKci_XfhTHTx-Gkw&_nc_ohc=OzL12j179H0Q7kNvwENa8CK&_nc_oc=AdrxzjFyACrPrZeoJTrMQQd9Fprf3FXs7bBZiQ3Qnv1r1ByiK_7yDSW11XFPk-Uxj5SML1vx-UhRnbPLdqymqBi9&_nc_zt=23&_nc_ht=scontent.fcpq2-1.fna&_nc_gid=RNt160nI5GhCXQ8dpCJCLA&_nc_ss=7b2a8&oh=00_AQFHyTrHknMu11tV9zkxG7E1A1wNsWphAkkmcB5UuEH2Xg&oe=6A7B1E47"
+              src="https://images.unsplash.com/photo-1619218533116-f050e7d91d91?w=400&h=480&fit=crop&auto=format&q=80"
               alt="Resultado de mega hair natural"
               className="absolute bottom-0 right-0 w-1/2 h-3/5 object-cover border-4 border-background bg-card"
             />
@@ -385,7 +387,7 @@ export default function App() {
           </div>
           <div className="relative bg-card min-h-[300px]">
             <img
-              src="https://scontent.fcpq2-1.fna.fbcdn.net/v/t51.82787-15/758356771_18621002032062937_6388600012883937887_n.jpg?stp=dst-jpegr_tt6&cstp=mx3072x4096&ctp=s3072x4096&_nc_cat=104&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeEwl0smRcglrnWhXFcFfiSivR_C5fmkH5C9H8Ll-aQfkDbfnkeGKPG9sAQW8J_2-AY&_nc_ohc=lEKL1U3b-wAQ7kNvwHwyoqQ&_nc_oc=Ado3NGvop2QUnI-LamaHNa3fzLqAS4tMf5m3wvkurb-g0gsesW80dzWZYmvkW3t7Eni69U7q725Gaq07XBSORUme&_nc_zt=23&se=-1&_nc_ht=scontent.fcpq2-1.fna&_nc_gid=92kf_NXX6ZoyfBFiORbFww&_nc_ss=7b2a8&oh=00_AQGAyT9U2T8nQkyl3p8bDTOCCCAYi5aC-4fHskSGJNJ6Aw&oe=6A7B0B7B"
+              src="https://images.unsplash.com/photo-1781450090585-1a511b7066d9?w=900&h=600&fit=crop&auto=format&q=80"
               alt="Salão Studio Aflores"
               className="absolute inset-0 w-full h-full object-cover"
             />
