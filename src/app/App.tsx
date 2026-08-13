@@ -49,7 +49,7 @@ export default function App() {
       <header className="fixed top-0 inset-x-0 z-50 bg-background/90 backdrop-blur-sm border-b border-border">
         <div className="max-w-7xl mx-auto px-6 md:px-10 h-16 flex items-center justify-between">
           <a href="#" className="flex items-center gap-2">
-            <span className="text-accent font-light text-2xl" style={{ fontFamily: display, fontStyle: "italic" }}>L</span>
+            <span className="text-accent font-light text-2xl" style={{ fontFamily: display, fontStyle: "italic" }}></span>
             <span className="text-sm tracking-[0.22em] uppercase font-medium text-foreground">STUDIO AFLORES</span>
           </a>
 
@@ -128,7 +128,7 @@ export default function App() {
 
           {/* Stats bar */}
           <div className="mt-auto pt-16 pb-10 grid grid-cols-3 md:grid-cols-3 gap-6 max-w-lg">
-            {[["2.400+", "Clientes atendidas"], ["8 anos", "De experiência"], ["4.9 ★", "Nota no Google"]].map(([n, l]) => (
+            {[["2.400+", "Clientes atendidas"], ["6 anos", "De experiência"], ["4.9 ★", "Nota no Google"]].map(([n, l]) => (
               <div key={l} className="border-t-2 border-primary/30 pt-4">
                 <p className="text-2xl md:text-3xl font-light text-primary" style={{ fontFamily: display }}>{n}</p>
                 <p className="text-[11px] tracking-wider uppercase text-foreground/45 mt-1 leading-tight">{l}</p>
