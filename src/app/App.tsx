@@ -160,7 +160,7 @@ export default function App() {
             />
             {/* Badge */}
             <div className="absolute top-6 right-6 md:-right-6 bg-accent text-accent-foreground w-24 h-24 rounded-full flex flex-col items-center justify-center text-center">
-              <span className="text-2xl font-light" style={{ fontFamily: display }}>8</span>
+              <span className="text-2xl font-light" style={{ fontFamily: display }}>6</span>
               <span className="text-[9px] tracking-wider uppercase leading-tight">anos de<br />experiência</span>
             </div>
           </div>
@@ -172,7 +172,7 @@ export default function App() {
               Especialistas em<br /><em className="not-italic text-accent">transformação</em><br />capilar.
             </h2>
             <p className="text-foreground/60 leading-relaxed mb-6 font-light">
-              No Lumina Hair, cada aplicação é tratada como uma obra de arte. Usamos apenas cabelos humanos virgens de alta procedência, selecionados individualmente para cada cliente.
+              No Studio Aflores, cada aplicação é tratada como uma obra de arte. Usamos apenas cabelos humanos virgens de alta procedência, selecionados individualmente para cada cliente.
             </p>
             <p className="text-foreground/60 leading-relaxed mb-10 font-light">
               Nossa equipe de especialistas passa por treinamentos contínuos para oferecer as técnicas mais avançadas do mercado com total segurança e cuidado.
